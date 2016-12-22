@@ -1,0 +1,35 @@
+<md-toolbar color="primary" class="md-hue-1">
+  <a [hidden]="!user" routerLink="/" class="md-title">Hangman</a>
+  <span class="fill-remaining-space"></span>
+  <div [hidden]="user">
+    <a md-button [routerLink]="['/login']" >Login</a>
+
+  </div>
+  <div [hidden]="!user">
+    <span>{{ user | displayName }}</span>
+    <button md-button (click)="logout()">Logout</button>
+  </div>
+</md-toolbar>
+
+<div class="md-content" layout="row" layout-align="center start" layout-fill layout-margin>
+  <div flex="20" class="md-whiteframe-z2">
+    <md-list-item class="secondary-button-padding">
+      <h4>Hangman</h4>
+      <button md-button [routerLink]="['/player']">Game</button>
+    </md-list-item>
+    <md-list-item class="secondary-button-padding">
+      <h4>Words</h4>
+      <button md-button [routerLink]="['/words']">Words</button>
+      <button md-button [routerLink]="['/new_word']">Create Words</button>
+    </md-list-item>
+    <md-list-item class="secondary-button-padding">
+      <h4>Users</h4>
+      <button md-button [routerLink]="['/users']">Users</button>
+      <button md-button [routerLink]="['/new_user']">New User</button>
+    </md-list-item>
+  </div>
+
+  <div flex="75">
+      <router-outlet></router-outlet>
+  </div>
+</div>

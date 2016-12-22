@@ -1,0 +1,11 @@
+
+<div class="md-content">
+    <h3>New User</h3>
+    <form [formGroup]="addFormUser" #f="ngForm" (ngSubmit)="createUser()">
+      <md-input type="text" formControlName="name" placeholder="name"></md-input>
+      <md-input type="text" formControlName="email" placeholder="email"></md-input>
+      <md-input type="password" formControlName="pass" placeholder="password"></md-input>
+      <button md-raised-button class="md-primary" type="submit"  aria-label="Register">Register</button>
+    </form>
+
+</div>

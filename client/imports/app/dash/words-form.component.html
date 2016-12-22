@@ -1,0 +1,7 @@
+<div class="md-content" layout="row">
+  <h3>Create Word</h3>
+  <form [formGroup]="addWord" #f="ngForm" (ngSubmit)="createWord()" layout="column" layout-fill layout-padding layout-margin>
+    <md-input type="text" formControlName="word" placeholder="word"></md-input>
+    <button md-raised-button class="md-primary" type="submit"  aria-label="Create User">Create word</button>
+  </form>
+</div>

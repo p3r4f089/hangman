@@ -1,0 +1,18 @@
+<div class="md-content" layout="row" layout-wrap>
+  <h1>Users</h1>
+  <div flex="25" *ngFor="let user of users | async" class="card-padding">
+    <md-card >
+      <md-card-content>
+        <h2 *ngIf="user.profile">{{user.profile.name}}</h2>
+        <p>{{user.username}}</p>
+        <p>{{user._id}}</p>
+      </md-card-content>
+
+      <div class="md-actions" layout="row|column" layout-align="start|end|center start|end|center">
+         <button md-raised-button (click)="removeUser(user)">remove</button>
+       </div>
+    </md-card>
+  </div>
+
+
+</div>

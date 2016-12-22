@@ -1,0 +1,32 @@
+@import "{}/node_modules/angular2-meteor-accounts-ui/build/login-buttons.scss";
+
+$color1 : #2F2933;
+$color2 : #01A2A6;
+$color3 : #29D9C2;
+$color4 : #BDF271;
+$color5 : #FFFFA6;
+$color6 : #2F2933;
+$color7 : #FF6F69;
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f8f8f8;
+
+}
+
+body.web {
+  overflow: visible;
+  position: initial;
+}
+.card-padding{
+  padding: 0.4em;
+}
+
+@import "./imports/material-layout";
